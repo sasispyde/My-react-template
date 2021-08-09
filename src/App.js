@@ -15,7 +15,7 @@ import ProtectedRoute from './protectedRoute/protectedRoute';
 /* Chart */
 const Chart = React.lazy( () => import('./components/pages/chart/chart'));
 
-/* Cards */
+/* Card */
 const Card = React.lazy( () => import('./components/pages/card/card'));
 
 /* Error pages */
