@@ -1,0 +1,174 @@
+/* Basic card  */
+.container {
+	height: 350px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+}
+
+.container div {
+	height: 60%;
+}
+
+.container div img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	padding: 10px;
+	border-radius: 8px 8px 8px 8px;
+}
+
+.container div p {
+	margin: 0;
+	text-align: inherit;
+	padding: 10px;
+	font-size: 16px;
+}
+
+/* Hide content card  */
+.hide_container {
+	min-height: 365px;
+	max-height: 365px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	overflow: hidden;
+}
+
+.hide_container .image_container {
+	height: 60%;
+}
+
+.hide_container .content_container {
+	height: 40%;
+}
+
+.showhide_button {
+	border: none;
+	background: white;
+	padding: 6px;
+	border : 1px solid #337dd2;
+	border-radius: 6px;
+	float: right;
+}
+
+.showhide_button:focus {
+	outline: none;
+}
+
+.hide_container .image_container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	padding: 0px 0px 10px 0;
+	border-radius: 4px 4px 4px 4px;
+}
+
+.content {
+	width: 100%;
+	height: 80%;
+	display: block;
+	overflow-y: hidden;
+}
+
+.show {
+	overflow-y: auto;
+}
+
+.hide_container p {
+	margin: 0;
+	text-align: inherit;
+	font-size: 16px;
+	padding: 10px 0px;
+}
+
+.showhide_button {
+	margin: 4px 0px;
+}
+
+.content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.content::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white; 
+  border-radius: 6px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: rgba(0, 171, 85,0.3); 
+  border-radius: 8px;
+}
+
+/* Menu card  */
+.container_menu {
+	height: 350px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+}
+
+.container_menu .menu_container {
+	height: 60%;
+}
+
+.card_image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	padding: 10px;
+	border-radius: 8px 8px 8px 8px;
+}
+
+.menu_container {
+	position: relative;
+}
+
+.menu {
+	display: none;
+	position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.menu_icon {
+    width: 28px;
+    height: 30px;
+    border-radius: 50%;
+    background: white;
+}
+
+.menu_items {
+	min-width: 150px;
+    min-height: 80px;
+    background: white;
+    position: absolute;
+    border: 1px solid #ddd;
+    right: 15px;
+    top: 28px;
+    border-radius: 6px;
+    display: none; 
+}
+
+.menu_items ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.menu_items ul li{
+	text-align: center;
+	padding: 6px 0px;
+}
+
+.card_image:hover + .menu, .menu:hover {
+	display: block;
+}
+
+.menu_icon:hover + .menu_items, .menu_items:hover {
+	display: block;
+}

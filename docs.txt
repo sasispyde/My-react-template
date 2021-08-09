@@ -1,0 +1,80 @@
+/* TO GENERATE FORM */ 
+* import FormGenerator from './components/utils/form_generator/formGenerator';
+* onSubmit
+* onChange
+* let field = [{
+    type : "text",
+    className : "input-field",
+    id: "user_name",
+    placeholder: "User name",
+    value: username,
+    name: "user_name",
+    onChange: handleChange,
+    label : "User name",
+    required : false,
+    error : "error_message"
+  }];
+* <FormGenerator onSubmit={handleSubmit} formFields={field}></FormGenerator>
+
+/* Error pages */
+const Error404 = React.lazy(() => import('./errorComponents/404/error404'));
+const Error401 = React.lazy(() => import('./errorComponents/401/error401'));
+const Error500 = React.lazy(() => import('./errorComponents/500/error500'));
+
+<Route path="/server_error">
+    <React.Suspense fallback={<Spinner />}><Error500 /></React.Suspense>
+</Route>
+<Route path="/token_error">
+    <React.Suspense fallback={<Spinner />}><Error401 /></React.Suspense>
+</Route>
+<Route path="*">
+    <React.Suspense fallback={<Spinner />}><Error404 /></React.Suspense>
+</Route>
+
+/* Alert */
+<Alert></Alert>
+
+
+/* with util functions */
+* wrap the component with withUtilFunctions;
+
+
+/* Protected routes */
+import ProtectedRoute from './protectedRoute/protectedRoute';
+import PublicRoute from './publicRoute/publicRoute';
+
+/* SPINNER */
+import Spinner from './components/utils/spinner/spinner';
+
+/* REDUX */
+useSelector((state) => state.value);        // get values from state;
+useDispatch();                              // dispatch an action;
+onClick={ () => dispatch(increment()) }     // example;
+immer                                       // immutable;
+
+
+/* CONTEXT */
+
+// ROOT
+import Context from './context/contextProvider';
+<Context>
+    <TestComponent></TestComponent>
+</Context>
+
+// Access
+import USERINFO from './context/context';
+var userInfo = React.useContext(USERINFO);
+
+/* Chart js */
+import Chart from '../../utils/chart/chart';
+<Chart type="line" data={data} id="lineChart" heading="Line Chart" /> 
+<Chart type="bar" data={data} id="barChart" heading="Bar Chart" />
+
+/* React-chartjs.-2 */
+import { Pie,Doughnut } from 'react-chartjs-2';
+<div>
+    <h2>Pie with react-chartjs-2</h2>
+    <div>
+        <Pie options={{ responsive: true,maintainAspectRatio: false, }} height={278} width={500} data={pieChart} id="NewChart" />
+    </div>
+</div>

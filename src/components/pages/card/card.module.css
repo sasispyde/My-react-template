@@ -1,0 +1,17 @@
+.card_container {
+	width: 100%;
+}
+
+.basic_card, .hide_content, .with_menu {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(300px , 1fr));
+	grid-gap: 10px;
+}
+
+.content_menu_card {
+	margin: 0;
+	text-align: inherit;
+	padding: 10px;
+	font-size: 16px;
+}

@@ -1,0 +1,90 @@
+#notfound_container {
+  position: relative;
+  height: 100vh;
+}
+
+#notfound_container .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.notfound {
+  max-width: 520px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.notfound .notfound_404 {
+  position: relative;
+  height: 240px;
+}
+
+.notfound .notfound_404 h1 {
+  font-family: 'Lobster', cursive;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 170px;
+  font-weight: 900;
+  margin: 0px;
+  color: tomato;
+  text-transform: uppercase;
+  margin-left: -20px;
+}
+
+.notfound .notfound_404 h1>span {
+  text-shadow: -8px 0px 0px #fff;
+}
+
+.notfound .notfound_404 h3 {
+  font-family: 'Cabin', sans-serif;
+  position: relative;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #262626;
+  margin: 0px;
+  letter-spacing: 3px;
+  padding-left: 6px;
+}
+
+.notfound h2 {
+  font-family: 'Cabin', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 767px) {
+  .notfound .notfound_404 {
+    height: 200px;
+  }
+  .notfound .notfound_404 h1 {
+    font-size: 160px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .notfound .notfound_404 {
+    height: 162px;
+  }
+  .notfound .notfound_404 h1 {
+    font-size: 150px;
+    height: 150px;
+    line-height: 162px;
+  }
+  .notfound h2 {
+    font-size: 16px;
+  }
+}
